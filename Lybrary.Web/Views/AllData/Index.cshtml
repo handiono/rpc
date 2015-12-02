@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View All Use Custom Query</h2>
+<hr />
+
+<h3>Table Books All Data</h3>
+<table class="table">
+    <thead>
+        <tr>
+        <td>ID</td>
+        <td>Book Name</td>
+        </tr>
+    </thead>
+    @foreach (var item in ViewBag.book)
+    {
+        <tbody>
+            <tr>
+                <td>@item.BookId</td>
+                <td>@item.Name</td>
+            </tr>
+        </tbody>
+    }
+</table>
+<hr />
+<h3>Table Member All Data</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Membe Name</td>
+        </tr>
+    </thead>
+    @foreach (var item in ViewBag.member)
+    {
+        <tbody>
+            <tr>
+                <td>@item.MemberId</td>
+                <td>@item.Name</td>
+            </tr>
+        </tbody>
+    }
+</table>
+
